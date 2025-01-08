@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from models import db, User
+from operations import add_user, get_all_users
 
 app = Flask(__name__)
 
@@ -9,10 +10,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # Disable event system for
 
 db.init_app(app)
 
-# Create the database (run this only the first time)
-with app.app_context():
-    db.create_all()
-    print("Database and tables created!")
 @app.route('/')
 def hello_world():  # put application's code here
     return 'Hello World!'
