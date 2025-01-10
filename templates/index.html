@@ -1,62 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nutrition App</title>
-    <style>
-        /* Styles for the navigation bar */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+{% extends "layout.html" %}
 
-        body {
-            font-family: Arial, sans-serif;
-        }
+{% block body %}
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-        }
-
-        .navbar .logo {
-            font-size: 20px;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-
-        .navbar ul {
-            list-style: none;
-            display: flex;
-        }
-
-        .navbar ul li {
-            margin: 0 10px;
-        }
-
-        .navbar ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 16px;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .navbar ul li a:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-<body>
 <nav class="navbar">
     <a href="#" class="logo">Nutrition App</a>
     <ul>
@@ -68,5 +13,13 @@
 </nav>
 
 
-</body>
-</html>
+    <form action="/" method="post">
+        <label>
+            <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
+        </label>
+        <button type="submit">Greet</button>
+    </form>
+
+
+
+{% endblock %}
