@@ -2,24 +2,10 @@
 
 {% block body %}
 
-<nav class="navbar">
-    <a href="#" class="logo">Nutrition App</a>
-    <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
-
-
-    <form action="/" method="post">
-        <label>
-            <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
-        </label>
-        <button type="submit">Greet</button>
-    </form>
-
-
+    {% if name %}
+        You are logged in as {{ name }}. <a href="/logout">Log out</a>.
+    {% else %}
+        You are not logged in. <a href="/login">Log in</a>.
+    {% endif %}
 
 {% endblock %}

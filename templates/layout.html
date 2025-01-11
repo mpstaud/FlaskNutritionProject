@@ -5,7 +5,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <title>Nutrition</title>
     <style>
         /* Styles for the navigation bar */
         * {
@@ -54,10 +56,27 @@
         .navbar ul li a:hover {
             background-color: #45a049;
         }
+        .container {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    {% block body %}{% endblock %}
+<nav class="navbar">
+    <a href="#" class="logo">Nutrition App</a>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/caloric_calculator">Caloric Calculator</a></li>
+        <li><a href="#">Food Diary</a></li>
+        <li><a href="#">Recipes</a></li>
+    </ul>
+</nav>
+<div class="container">
+    {% block body %}
+
+    {% endblock %}
+
+</div>
 
 </body>
 </html>

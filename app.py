@@ -1,22 +1,31 @@
-from flask import Flask, render_template, request
+from crypt import methods
+
+from flask import Flask, redirect, render_template, request, session
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from models import db, User, FoodLog
 from operations import add_user, get_all_users, add_food_log
-
+from flask_session import Session
+from formulas import basal_metabolic_rate, harris_benedict_calculation
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydatabase.db'  # Database file name
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # Disable event system for performance
 
+app.config["SESSION_PERMANENT"] = False
+app.config["SESSION_TYPE"] = "filesystem"
+Session(app)
+
 db.init_app(app)
 migrate = Migrate(app, db)
 
-@app.route('/',methods=["GET","POST"])
-def home():  # put application's code here
+
+@app.route('/')
+def index():  # put application's code here
     with app.app_context():
         user = add_user('Matt', 'staudachermatthew@gmail.com')
         print(user)
+    '''
     with app.app_context():
         log = add_food_log(
             user_email='staudachermatthew@gmail.com',
@@ -24,13 +33,34 @@ def home():  # put application's code here
             calories=105
         )
         print(log)
-    if request.method == "POST":
-        return render_template("greet.html", name=request.form.get("name"))
-    return render_template('index.html')
+    '''
+    return render_template("index.html", name = session.get("name"))
 
-@app.route("/greet", methods=["post"])
-def greet():
-    return render_template("greet.html", name=request.args.get("name", "world"))
+
+@app.route("/login", methods=["GET","POST"])
+def login():
+    if request.method == "POST":
+        session["name"] = request.form.get("name")
+        return redirect("/")
+    return render_template("login.html")
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect("/")
+
+@app.route("/caloric_calculator", methods=["GET","POST"])
+def caloric_calculator():
+    if request.method == "POST":
+        sex = str(request.form.get("sex"))
+        weight = int(request.form.get("weight"))
+        height = int(request.form.get("height"))
+        age = int(request.form.get("age"))
+        activity = request.form.get("activity_level")
+        bmr = basal_metabolic_rate(height, weight, age, sex)
+        result = harris_benedict_calculation(activity, bmr)
+        return render_template("caloric_results.html", result = result)
+    return render_template("caloric_calculator.html")
 
 
 if __name__ == '__main__':
