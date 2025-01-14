@@ -62,6 +62,13 @@ def caloric_calculator():
         return render_template("caloric_results.html", result = result)
     return render_template("caloric_calculator.html")
 
+@app.route("/meal_plan")
+def meal_plan():
+    return "<p>Meal plan</p>"
+
+
+
+
 
 if __name__ == '__main__':
     app.run()
