@@ -70,3 +70,28 @@ def add_food_log(user_email, food_item, calories, log_date=None):
     db.session.add(food_log)
     db.session.commit()
     return food_log
+
+# operations.py
+
+from models import db, MealPlan
+
+
+def create_meal_plan(user_email, week_start_date, meal_plan):
+    """
+    Function to create and save a new meal plan in the database.
+    """
+    if not user_email or not week_start_date or not meal_plan:
+        raise ValueError("All fields are required to create a meal plan.")
+
+    # Create a new instance of the MealPlan model
+    new_meal_plan = MealPlan(
+        user_email=user_email,
+        week_start_date=week_start_date,
+        meal_plan=meal_plan
+    )
+
+    # Add it to the session and commit it
+    db.session.add(new_meal_plan)
+    db.session.commit()
+
+    return new_meal_plan

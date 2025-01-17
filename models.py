@@ -27,3 +27,8 @@ class FoodLog(db.Model):
         return f"<FoodLog {self.food_item}, {self.calories} calories>"
 
 
+class MealPlan(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_email = db.Column(db.String(120), db.ForeignKey('user.email'), nullable=False)
+    week_start_date = db.Column(db.Date, nullable=False)  # To track the start week
+    meal_plan = db.Column(db.JSON, nullable=False)  # Use JSON or text for flexibility
