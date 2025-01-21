@@ -3,7 +3,20 @@ from datetime import date
 from flask import session
 
 def add_user(name, email):
+    """
+    Adds a new user to the database or retrieves an existing user given the email.
+    It first checks whether a user with the specified email already exists in the
+    database. If the user exists, it simply returns the existing user record.
+    Otherwise, it creates a new user with the provided name and email and saves
+    this record to the database.
 
+    :param name: The name of the user to be added or retrieved.
+    :type name: str
+    :param email: The email of the user. Used to check if the user already exists.
+    :type email: str
+    :return: The user object retrieved from the database or the newly created one.
+    :rtype: User
+    """
         # Check if the user already exists
     existing_user = User.query.filter_by(email=email).first()
 
@@ -21,6 +34,18 @@ def get_all_users():
     return User.query.all()
 
 def get_current_user():
+    """
+    Fetches the currently logged-in user from the session. Ensures that a user is logged
+    in by checking the presence of 'user_id' in the session, then retrieves the user
+    from the database using the stored user ID. Raises errors if no user is logged in
+    or if the user is not found in the database.
+
+    :raises ValueError: If there is no user currently logged in or the user is not
+        found in the database.
+    :returns: The currently logged-in user.
+
+    :rtype: User
+    """
     if 'user_id' not in session:
         raise ValueError("No user is currently logged in!")
 
@@ -32,6 +57,21 @@ def get_current_user():
 
 
 def update_user_email(user_id, new_email):
+    """
+    Updates the email address of a user in the database based on the provided
+    user ID. If the user is found, their email is updated with the new email
+    address, and the changes are committed to the database. Returns the updated
+    user object if the operation is successful or None if the user is not found.
+
+    :param user_id: The unique identifier of the user whose email is to be
+        updated.
+    :type user_id: int
+    :param new_email: The new email address to assign to the user.
+    :type new_email: str
+    :return: The User object with the updated email address if the user is found,
+        otherwise None.
+    :rtype: Optional[User]
+    """
     user = User.query.get(user_id)
     if user:
         user.email = new_email

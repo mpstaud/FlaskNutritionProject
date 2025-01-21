@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>Add a Meal Plan</h1>
+    <form method="POST" action="{{ url_for('add_meal_plan') }}">
+        <label for="user_email">Select User:</label>
+        <select name="user_email" id="user_email" required>
+            {% for user in users %}
+            <option value="{{ user.email }}">{{ user.name }} ({{ user.email }})</option>
+            {% endfor %}
+        </select>
+        <br><br>
+
+        <label for="week_start_date">Week Start Date:</label>
+        <input type="date" id="week_start_date" name="week_start_date" required>
+        <br><br>
+
+        <label for="meal_plan">Meal Plan (JSON Format):</label>
+        <textarea id="meal_plan" name="meal_plan" rows="10" cols="50" placeholder='{"meal1": "Lunch", "meal2": "Dinner"}' required></textarea>
+        <br><br>
+
+        <button type="submit">Add Meal Plan</button>
+    </form>
+
+{% endblock %}
