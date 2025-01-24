@@ -20,6 +20,13 @@
         <li><a href="#">Food Diary</a></li>
         <li><a href="#">Recipes</a></li>
         <li><a href="#">Meal Plans </a></li>
+        <li>
+            {% if name %}
+            <a href="/logout">Log out</a>.
+            {% else %}
+            <a href="/login">Log in</a>.
+            {% endif %}
+        </li>
     </ul>
 </nav>
 <div class="container">

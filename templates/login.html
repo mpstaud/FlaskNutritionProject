@@ -2,11 +2,15 @@
 
 {% block body %}
 
-    <form action="/login" method="post">
-        <label>
-            <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
-        </label>
-        <button type="submit">Log In</button>
-    </form>
+    <main>
+        <div class="login">
+        <form action="/login" method="post">
+            <label>
+                <input class="your_name" autocomplete="off" autofocus name="name" placeholder="Name" type="text">
+            </label>
+            <button type="submit">Log In</button>
+        </form>
+        </div>
+    </main>
 
 {% endblock %}
