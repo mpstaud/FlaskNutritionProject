@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84a63104-6aad-4b99-8fa4-36856563d7d5" name="Changes" comment="Add mealpan.html, new_meal_plan.html, moved the css from the style tag in layout.html to main.css. Added model for meal plans in models.py as well as a helper function in operations.py to insert new meal plans into the table">
+    <list default="true" id="84a63104-6aad-4b99-8fa4-36856563d7d5" name="Changes" comment="Put content inside main tags on caloric_calculator.html and login.html. Updated styling for all pages in style.css. Added login/logout button to the navbar in layout.html">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_24_25,_8_25 AM_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/ui_mod.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FlaskNutritionProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FlaskNutritionProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_session/2029240f6d1128be89ddc32729463129" beforeDir="false" afterPath="$PROJECT_DIR$/flask_session/2029240f6d1128be89ddc32729463129" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_session/fbc064d64be6860792b5293cf08f5e21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/formulas.py" beforeDir="false" afterPath="$PROJECT_DIR$/formulas.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/caloric_calculator.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/caloric_calculator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +43,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -98,7 +104,7 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -131,6 +137,7 @@
       <workItem from="1736901950802" duration="27127000" />
       <workItem from="1737235870859" duration="602000" />
       <workItem from="1737686220799" duration="5168000" />
+      <workItem from="1737936490269" duration="6134000" />
     </task>
     <task id="LOCAL-00001" summary="add venv files">
       <option name="closed" value="true" />
@@ -180,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737083274225</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Put content inside main tags on caloric_calculator.html and login.html. Updated styling for all pages in style.css. Added login/logout button to the navbar in layout.html">
+      <option name="closed" value="true" />
+      <created>1737728541435</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1737728541435</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,9 +216,10 @@
     <MESSAGE value="add venv files" />
     <MESSAGE value="Updated the FoodLog table, added layout.html as the base template and both index.html and greet.html extend layout.html. Also add get_current_user as well as add_food_log in operations.py." />
     <MESSAGE value="Add mealpan.html, new_meal_plan.html, moved the css from the style tag in layout.html to main.css. Added model for meal plans in models.py as well as a helper function in operations.py to insert new meal plans into the table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add mealpan.html, new_meal_plan.html, moved the css from the style tag in layout.html to main.css. Added model for meal plans in models.py as well as a helper function in operations.py to insert new meal plans into the table" />
+    <MESSAGE value="Put content inside main tags on caloric_calculator.html and login.html. Updated styling for all pages in style.css. Added login/logout button to the navbar in layout.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Put content inside main tags on caloric_calculator.html and login.html. Updated styling for all pages in style.css. Added login/logout button to the navbar in layout.html" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/FlaskNutritionProject$FlaskNutritionProject.coverage" NAME="FlaskNutritionProject Coverage Results" MODIFIED="1737726274706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/FlaskNutritionProject$FlaskNutritionProject.coverage" NAME="FlaskNutritionProject Coverage Results" MODIFIED="1738029085600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

@@ -91,7 +91,9 @@ def caloric_calculator():
     if request.method == "POST":
         sex      =                     str(request.form.get("sex"))
         weight   =                  int(request.form.get("weight"))
-        height   =                  int(request.form.get("height"))
+        height_ft   =                  int(request.form.get("height_ft"))
+        height_in   =                  int(request.form.get("height_in"))
+        height = (height_ft * 12) + height_in
         age      =                     int(request.form.get("age"))
         activity =               request.form.get("activity_level")
         # call functions from formulas.py
