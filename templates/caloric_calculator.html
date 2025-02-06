@@ -4,39 +4,44 @@
     <main class="calculator">
         <form action="/caloric_calculator" method="post">
 
-            <label>
+            <div>
+
+                <label>
+                    Name:
                 <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
-            </label>
+                </label>
+            </div>
 
-
-
-            <label>
-                Name:
-            <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
-            </label>
-            <div id="sex">
+            <div>
                 <label for="sex">Sex:</label>
                 <select name = "sex" id="sex">
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                 </select>
             </div>
-            <label>
-                Weight:
-                <select name="weight_unit" id="weight_unit">
-                    <option value="US">US</option>
-                    <option value="METRIC">Metric</option>
-                </select>
-            </label>
 
-            <label id="weight_us" style="display: none;">
-                Weight (US):
-                <input class="user_weight" type="number" name = "weight" placeholder="Enter your weight" id="weight_us">
-            </label>
-            <label id="weight_metric" style="display: none;">
-                Weight (Metric):
-                <input class="user_weight" type="number" name = "weight" placeholder="Enter your weight" id="weight_metric">
-            </label>
+            <div>
+                <label>
+                    Weight:
+                    <select name="weight_unit" id="weight_unit">
+                        <option value="US">US</option>
+                        <option value="METRIC">Metric</option>
+                    </select>
+                </label>
+            </div>
+
+            <div>
+                <label id="weight_us" style="display: none;">
+                    Weight (US):
+                    <input class="user_weight" type="number" name = "weight" placeholder="Enter your weight" id="weight_us">
+                </label>
+                <label id="weight_metric" style="display: none;">
+                    Weight (Metric):
+                    <input class="user_weight" type="number" name = "weight" placeholder="Enter your weight" id="weight_metric">
+                </label>
+            </div>
+
+            <div>
                 <label>
                     Height:
                     <select class="user_height" name="height_unit" id="height_unit">
@@ -44,52 +49,59 @@
                         <option value="METRIC">Metric</option>
                     </select>
                     <label id="us-height" style="display: none;">
-                    (US):
-                    <select class="user_height" name="height_ft" id="height_ft">
-                        <option value=4>4'</option>
-                        <option value=5>5'</option>
-                        <option value=6>6'</option>
-                        <option value=7>7'</option>
-                    </select>
-                    <select class="user_height" name="height_in" id="height_in">
-                        <option value=0>0"</option>
-                        <option value=1>1"</option>
-                        <option value=2>2"</option>
-                        <option value=3>3"</option>
-                        <option value=4>4"</option>
-                        <option value=5>5"</option>
-                        <option value=6>6"</option>
-                        <option value=7>7"</option>
-                        <option value=8>8"</option>
-                        <option value=9>9"</option>
-                        <option value=10>10"</option>
-                        <option value=11>11"</option>
-                    </select>
+                        (US):
+                        <select class="user_height" name="height_ft" id="height_ft">
+                            <option value=4>4'</option>
+                            <option value=5>5'</option>
+                            <option value=6>6'</option>
+                            <option value=7>7'</option>
+                        </select>
+                        <select class="user_height" name="height_in" id="height_in">
+                            <option value=0>0"</option>
+                            <option value=1>1"</option>
+                            <option value=2>2"</option>
+                            <option value=3>3"</option>
+                            <option value=4>4"</option>
+                            <option value=5>5"</option>
+                            <option value=6>6"</option>
+                            <option value=7>7"</option>
+                            <option value=8>8"</option>
+                            <option value=9>9"</option>
+                            <option value=10>10"</option>
+                            <option value=11>11"</option>
+                        </select>
 
+                    </label>
+                    <label id="metric-height" style="display: none;">
+                        (Metric):
+                        <input class="user_height" type="number" name="height_cm" placeholder="Enter height in cm" id="height_cm">
+                    </label>
                 </label>
-                <label id="metric-height" style="display: none;">
-                    (Metric):
-                    <input class="user_height" type="number" name="height_cm" placeholder="Enter height in cm" id="height_cm">
+            </div>
+
+
+
+            <div>
+                <label>
+                    Age:
+                    <input class="age" type="number" name = "age" placeholder="How old are you?" id="age">
                 </label>
-            </label>
+            </div>
 
-
-
-
-            <label>
-                Age:
-                <input class="age" type="number" name = "age" placeholder="How old are you?" id="age">
-            </label>
-            <label>
-                Activity Level:
-                <select class="user_activity_level" name = "activity_level" id="activity_level">
-                    <option value="inactive">Inactive</option>
-                    <option value="somewhat_active">Somewhat Active</option>
-                    <option value="active">Active</option>
-                    <option value="athlete">Athlete</option>
-                </select>
-            </label>
-            <button class="calculate" type="submit">Calculate</button>
+            <div>
+                <label>
+                    Activity Level:
+                    <select class="user_activity_level" name = "activity_level" id="activity_level">
+                        <option value="inactive">Inactive</option>
+                        <option value="somewhat_active">Somewhat Active</option>
+                        <option value="active">Active</option>
+                        <option value="athlete">Athlete</option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <button class="calculate" type="submit">Calculate</button>
+            </div>
         </form>
     </main>
 

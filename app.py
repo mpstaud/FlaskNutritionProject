@@ -89,19 +89,22 @@ def caloric_calculator():
     :rtype: flask.wrappers.Response
     """
     if request.method == "POST":
-        sex      =                     str(request.form.get("sex"))
+        gender      =                     str(request.form.get("gender"))
         weight   =                  int(request.form.get("weight"))
-        height_ft   =                  int(request.form.get("height_ft"))
-        height_in   =                  int(request.form.get("height_in"))
+
+
+        height_ft = int(request.form.get("height_ft"))
+        height_in = int(request.form.get("height_in"))
+
         height = (height_ft * 12) + height_in
         age      =                     int(request.form.get("age"))
         activity =               request.form.get("activity_level")
         # call functions from formulas.py
-        bmr      =   basal_metabolic_rate(height, weight, age, sex)
-        result   =       harris_benedict_calculation(activity, bmr)
+        bmr      =   basal_metabolic_rate(height, weight, age, gender)
+        daily_calories   =       harris_benedict_calculation(activity, bmr)
 
-        return render_template("caloric_results.html", result=result)
-    return render_template("caloric_calculator.html")
+        return render_template("caloric_results.html", daily_calories=daily_calories)
+    return render_template("caloric_calculator_concept_2.html")
 
 
 @app.route("/meal_plan", methods=["GET"])

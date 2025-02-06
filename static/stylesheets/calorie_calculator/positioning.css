@@ -1,0 +1,65 @@
+
+
+#calc , .caloric_results{
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center
+}
+
+
+
+main, .calculator, .your_name::placeholder, .caloric_results {
+    display: flex;
+}
+
+main, .calculator, .login, .your_name::placeholder .caloric_results{
+    justify-content: center;
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+
+}
+
+.text_input {
+    width: 10em;
+    height: 2em;
+    border-radius: 1em;
+    padding-left: 0.5em;
+}
+
+#calc {
+    width: 50%;
+    height: auto;
+    min-height: 500px;
+    border-radius: 30px;
+    border: 1px  solid black;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+#age::placeholder{
+    text-align: left;
+
+}
+
+.caloric_results {
+    width: 50%;
+    height: auto;
+    min-height: 500px;
+    border-radius: 30px;
+    border: 1px  solid black;
+}
+#height_in, #height_ft {
+    width: 5em;
+    height: 2em;
+    border-radius: 1em;
+    padding-left: 0.5em;
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+}

@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='./stylesheets/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./stylesheets/calorie_calculator/positioning.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./stylesheets/calorie_calculator/color.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./stylesheets/calorie_calculator/text.css') }}">
+
+{% endblock stylesheet%}
+
+{% block body %}
+    <br>
+    <br>
+    <div id="calc">
+        <form action="/caloric_calculator" method="POST">
+            <br>
+            <div id="gender_div">
+                <label for="gender">Gender:
+                    <input type="radio" name="gender" id="gender" value="male" required="required"/> Male
+                    <input type="radio" name="gender" id="gender" value="female" required="required"/> Female
+                </label>
+            </div>
+            <br><br>
+
+            <label for="age">Age:</label>
+            <input class="text_input" type="number" name="age" id="age" placeholder="Age" required="required"/><br><br>
+
+            <label for="weight">Weight:</label>
+            <input class="text_input" type="number" name="weight" id="weight" placeholder="Weight" required="required"/><br><br>
+
+            <label>
+                Height:
+                <select name="height_ft" id="height_ft" required="required">
+                    <option value=4>4'</option>
+                    <option value=5 selected="selected">5'</option>
+                    <option value=6>6'</option>
+                    <option value=7>7'</option>
+                </select>
+
+                <select name="height_in" id="height_in" required="required">
+                    <option value=0>0"</option>
+                    <option value=1>1"</option>
+                    <option value=2>2"</option>
+                    <option value=3>3"</option>
+                    <option value=4>4"</option>
+                    <option value=5>5"</option>
+                    <option value=6>6"</option>
+                    <option value=7>7"</option>
+                    <option value=8>8"</option>
+                    <option value=9 selected="selected">9"</option>
+                    <option value=10>10"</option>
+                    <option value=11>11"</option>
+                </select>
+            </label><br><br>
+            <div id="activity_level_div">
+                <label for="activity_level">Activity Level:
+                    <input type="radio" name="activity_level" id="activity_level" value="inactive"> Inactive
+                    <input type="radio" name="activity_level" id="activity_level" value="somewhat_active"> Somewhat Active
+                    <input type="radio" name="activity_level" id="activity_level" value="active"> Active
+                    <input type="radio" name="activity_level" id="activity_level" value="athlete"> Athlete
+                </label>
+            </div>
+            <br><br>
+            <button type="submit">Calculate</button>
+
+        </form>
+    </div>
+
+
+{% endblock %}

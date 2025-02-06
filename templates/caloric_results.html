@@ -1,6 +1,15 @@
 {% extends "layout.html" %}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='./stylesheets/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./stylesheets/calorie_calculator/positioning.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./stylesheets/calorie_calculator/color.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./stylesheets/calorie_calculator/text.css') }}">
+{% endblock %}
 
 {% block body %}
-    Your recommended caloric intake is {{ result }} calories.
+    <br>
+    <div class="caloric_results">
+        <p>Your recommended caloric intake is <strong>{{ daily_calories }}</strong> calories.</p>
+    </div>
 
 {% endblock %}
