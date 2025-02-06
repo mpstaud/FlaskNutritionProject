@@ -21,6 +21,7 @@ input[type="radio"] {
     width: 20px;
     height: 20px;
 
+
 }
 
 .text_input {
@@ -28,6 +29,7 @@ input[type="radio"] {
     height: 2em;
     border-radius: 1em;
     padding-left: 0.5em;
+    border: 1px solid black;
 }
 
 #calc {
@@ -62,4 +64,5 @@ input[type="radio"] {
     padding-left: 0.5em;
     font-size: 16px;
     font-family: Verdana, sans-serif;
+    border: 1px solid black;
 }
