@@ -4,20 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84a63104-6aad-4b99-8fa4-36856563d7d5" name="Changes" comment="Update form for caloric calculator, add UI mod script for dynamic select options depending on chosen unit of measurement for height">
-      <change afterPath="$PROJECT_DIR$/static/stylesheets/calorie_calculator/color.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/stylesheets/calorie_calculator/positioning.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/stylesheets/calorie_calculator/text.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/stylesheets/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/caloric_calculator_concept_2.html" afterDir="false" />
+    <list default="true" id="84a63104-6aad-4b99-8fa4-36856563d7d5" name="Changes" comment="add gunicorn to requirements.txt">
+      <change beforePath="$PROJECT_DIR$/.idea/FlaskNutritionProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FlaskNutritionProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/ui_mod.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/scripts/ui_mod.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/ui_mod_wt.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/scripts/ui_mod_wt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/caloric_calculator.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/caloric_calculator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/stylesheets/calorie_calculator/positioning.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheets/calorie_calculator/positioning.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/stylesheets/calorie_calculator/text.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/caloric_calculator_concept_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/caloric_calculator_concept_2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/caloric_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/caloric_results.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738130281401</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add gunicorn to requirements.txt">
+      <option name="closed" value="true" />
+      <created>1738893472288</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1738893472288</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,9 +251,11 @@
     <MESSAGE value="Add mealpan.html, new_meal_plan.html, moved the css from the style tag in layout.html to main.css. Added model for meal plans in models.py as well as a helper function in operations.py to insert new meal plans into the table" />
     <MESSAGE value="Put content inside main tags on caloric_calculator.html and login.html. Updated styling for all pages in style.css. Added login/logout button to the navbar in layout.html" />
     <MESSAGE value="Update form for caloric calculator, add UI mod script for dynamic select options depending on chosen unit of measurement for height" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update form for caloric calculator, add UI mod script for dynamic select options depending on chosen unit of measurement for height" />
+    <MESSAGE value="add gunicorn to requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="add gunicorn to requirements.txt" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/FlaskNutritionProject$FlaskNutritionProject.coverage" NAME="FlaskNutritionProject Coverage Results" MODIFIED="1738807552883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FlaskNutritionProject$plot.coverage" NAME="plot Coverage Results" MODIFIED="1737317746211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FlaskNutritionProject$FlaskNutritionProject.coverage" NAME="FlaskNutritionProject Coverage Results" MODIFIED="1738049744499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
