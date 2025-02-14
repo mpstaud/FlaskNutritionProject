@@ -1,13 +1,19 @@
-
+/* Div styling */
 
 #calc , .caloric_results{
     align-items: center;
-    flex-direction: column;
-    margin: 0 auto;
-    justify-content: center;
     background-color: rgba(255, 255, 255, 0.2);
+    border: 1px  solid black;
+    border-radius: 30px;
     color: lightgrey;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+
+
 }
+
+/* End Div Styling */
 
 
 
@@ -95,3 +101,4 @@ label {
     font-family: Verdana, sans-serif;
     border: 1px solid black;
 }
+
