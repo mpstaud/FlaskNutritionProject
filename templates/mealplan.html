@@ -1,6 +1,52 @@
 {% extends "layout.html" %}
 
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='./stylesheets/main.css') }}">
+
+{% endblock %}
+
 {% block body %}
+    <div>
+        <form>
+            <br>
+            <h2>Sunday</h2>
+            <div>
+                <label>
+                    Breakfast
+                    <input type="text">
+                </label>
+                <br>
+                <label>
+                    Lunch
+                    <input type="text">
+                </label>
+                <br>
+                <label>
+                    Dinner
+                    <input type="text">
+                </label>
+            </div>
+            <h2>Monday</h2>
+            <div>
+                <label>
+                    Breakfast
+                    <input type="text">
+                </label>
+                <br>
+                <label>
+                    Lunch
+                    <input type="text">
+                </label>
+                <br>
+                <label>
+                    Dinner
+                    <input type="text">
+                </label>
+            </div>
+            <br>
+            <input type="submit">
+        </form>
+    </div>
 
 
 

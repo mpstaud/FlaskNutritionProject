@@ -106,14 +106,7 @@ def caloric_calculator():
         return render_template("caloric_results.html", daily_calories=daily_calories)
     return render_template("caloric_calculator_concept_2.html")
 
-
-@app.route("/meal_plan", methods=["GET"])
-def view_meal_plan():
-
-    return render_template("mealplan.html", name=session.get("name"))
-
-
-@app.route("/meal_plan_new", methods=["GET", "POST"])
+@app.route("/create_meal_plan", methods=["GET", "POST"])
 def create_meal_plan():
     """
     Creates a new meal plan for the user. This function handles both GET and POST
@@ -142,14 +135,7 @@ def create_meal_plan():
         meal plan page after successfully creating the meal plan.
     :rtype: Union[str, werkzeug.wrappers.response.Response]
     """
-    if request.method == "POST":
-        user_email = session.get("name")  # Get user's email or unique identifier
-        week_start_date = request.form.get("week_start_date")  # Date input from form
-        meal_plan = request.form.get("meal_plan")  # Text input (JSON string or plain text)
-
-        create_meal_plan(user_email, week_start_date, meal_plan)
-        return redirect("/meal_plan")
-    return render_template("new_meal_plan.html")
+    return render_template("mealplan.html")
 
 
 if __name__ == '__main__':
