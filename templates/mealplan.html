@@ -2,15 +2,17 @@
 
 {% block stylesheet %}
     <link rel="stylesheet" href="{{ url_for('static', filename='./stylesheets/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./stylesheets/mealplan.css') }}">
 
 {% endblock %}
 
 {% block body %}
-    <div>
-        <form>
+    <div id="meal_plan">
+        <form id="meal_plan_form" action="/meal_plan" method="post">
             <br>
-            <h2>Sunday</h2>
-            <div>
+
+            <div class="day">
+                <h2>Sunday</h2>
                 <label>
                     Breakfast
                     <input type="text">
@@ -21,13 +23,15 @@
                     <input type="text">
                 </label>
                 <br>
+
                 <label>
                     Dinner
                     <input type="text">
                 </label>
             </div>
-            <h2>Monday</h2>
-            <div>
+
+            <div class="day">
+                <h2>Monday</h2>
                 <label>
                     Breakfast
                     <input type="text">
