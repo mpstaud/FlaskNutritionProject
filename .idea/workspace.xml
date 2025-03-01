@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84a63104-6aad-4b99-8fa4-36856563d7d5" name="Changes" comment="add gunicorn to requirements.txt">
-      <change afterPath="$PROJECT_DIR$/static/stylesheets/mealplan.css" afterDir="false" />
+    <list default="true" id="84a63104-6aad-4b99-8fa4-36856563d7d5" name="Changes" comment="Consolidated CSS for the calorie calculator form">
       <change beforePath="$PROJECT_DIR$/.idea/FlaskNutritionProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FlaskNutritionProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_session/2029240f6d1128be89ddc32729463129" beforeDir="false" afterPath="$PROJECT_DIR$/flask_session/2029240f6d1128be89ddc32729463129" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/stylesheets/mealplan.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheets/mealplan.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/mealplan.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mealplan.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +38,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
@@ -50,14 +55,16 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/mpstaud/FlaskNutritionProject.git&quot;,
-    &quot;accountId&quot;: &quot;59d02b72-6849-4463-ad73-d992eef40fa0&quot;
+    &quot;accountId&quot;: &quot;ec2e0681-51f8-44e4-b79d-f2fb47f8da88&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2rK2hRu9kEm8lNH9ZnuvavZkiFE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -118,8 +125,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.180" />
-        <option value="bundled-python-sdk-85c76a3b01b3-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.180" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.220" />
+        <option value="bundled-python-sdk-0fc6c617c4bd-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.220" />
       </set>
     </attachedChunks>
   </component>
@@ -146,8 +153,7 @@
       <workItem from="1738420071800" duration="2927000" />
       <workItem from="1738534648381" duration="7114000" />
       <workItem from="1738717520321" duration="25651000" />
-      <workItem from="1740574838170" duration="5797000" />
-      <workItem from="1740590048783" duration="4466000" />
+      <workItem from="1740014499919" duration="5584000" />
     </task>
     <task id="LOCAL-00001" summary="add venv files">
       <option name="closed" value="true" />
@@ -229,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738893472288</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Consolidated CSS for the calorie calculator form">
+      <option name="closed" value="true" />
+      <created>1739550109495</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1739550109495</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,10 +267,11 @@
     <MESSAGE value="Put content inside main tags on caloric_calculator.html and login.html. Updated styling for all pages in style.css. Added login/logout button to the navbar in layout.html" />
     <MESSAGE value="Update form for caloric calculator, add UI mod script for dynamic select options depending on chosen unit of measurement for height" />
     <MESSAGE value="add gunicorn to requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gunicorn to requirements.txt" />
+    <MESSAGE value="Consolidated CSS for the calorie calculator form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Consolidated CSS for the calorie calculator form" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FlaskNutritionProject$plot.coverage" NAME="plot Coverage Results" MODIFIED="1737317746211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FlaskNutritionProject$FlaskNutritionProject.coverage" NAME="FlaskNutritionProject Coverage Results" MODIFIED="1740599689149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FlaskNutritionProject$FlaskNutritionProject.coverage" NAME="FlaskNutritionProject Coverage Results" MODIFIED="1740750444877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
