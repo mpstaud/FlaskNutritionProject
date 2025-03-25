@@ -7,47 +7,137 @@
 {% endblock %}
 
 {% block body %}
+    <br>
     <div id="meal_plan">
-        <form id="meal_plan_form" action="/meal_plan" method="post">
+        <form id="meal_plan_form" action="/meal_plan" method="POST">
             <br>
 
             <div class="day">
                 <h2>Sunday</h2>
+                <br>
                 <label>
                     Breakfast
-                    <input class="meal" type="text">
+                    <input class="meal" id="sun_b" name="sun_b" type="text">
                 </label>
-                <br>
                 <label>
                     Lunch
-                    <input class="meal" type="text">
+                    <input class="meal" name = "sun_l" type="text">
                 </label>
-                <br>
 
                 <label>
                     Dinner
-                    <input class="meal" type="text">
+                    <input class="meal" name = "sun_d" type="text">
                 </label>
+
             </div>
+            <br>
 
             <div class="day">
                 <h2>Monday</h2>
+                <br>
                 <label>
                     Breakfast
-                    <input class="meal" type="text">
+                    <input class="meal" name="mon_b" type="text">
                 </label>
-                <br>
                 <label>
                     Lunch
-                    <input class="meal" type="text">
+                    <input class="meal" name="mon_l" type="text">
                 </label>
-                <br>
                 <label>
                     Dinner
-                    <input class="meal" type="text">
+                    <input class="meal" name="mon_d" type="text">
                 </label>
             </div>
             <br>
+            <div class="day">
+                <h2>Tuesday</h2>
+                <br>
+                <label>
+                    Breakfast
+                    <input class="meal" name="tues_b" type="text">
+                </label>
+
+                <label>
+                    Lunch
+                    <input class="meal" name="tues_l" type="text">
+                </label>
+
+                <label>
+                    Dinner
+                    <input class="meal" name="tues_d" type="text">
+                </label>
+
+            </div>
+            <br>
+            <div class="day">
+                <h2>Wednesday</h2>
+                <br>
+                <label>
+                    Breakfast
+                    <input class="meal" name="wed_b" type="text">
+                </label>
+                <label>
+                    Lunch
+                    <input class="meal" name="wed_l" type="text">
+                </label>
+                <label>
+                    Dinner
+                    <input class="meal" name="wed_d" type="text">
+                </label>
+            </div>
+            <br>
+            <div class="day">
+                <h2>Thursday</h2>
+                <br>
+                <label>
+                    Breakfast
+                    <input class="meal" name = "thurs_b" type="text">
+                </label>
+                <label>
+                    Lunch
+                    <input class="meal" name = "thurs_l" type="text">
+                </label>
+                <label>
+                    Dinner
+                    <input class="meal" name = "thurs_d" type="text">
+                </label>
+            </div>
+            <br>
+            <div class="day">
+                <h2>Friday</h2>
+                <br>
+                <label>
+                    Breakfast
+                    <input class="meal" name = "fri_b" type="text">
+                </label>
+                <label>
+                    Lunch
+                    <input class="meal" name = "fri_l" type="text">
+                </label>
+                <label>
+                    Dinner
+                    <input class="meal" name = "fri_d" type="text">
+                </label>
+            </div>
+            <br>
+            <div class="day">
+                <h2>Saturday</h2>
+                <br>
+                <label>
+                    Breakfast
+                    <input class="meal" name = "sat_b" type="text">
+                </label>
+                <label>
+                    Lunch
+                    <input class="meal" name = "sat_l" type="text">
+                </label>
+                <label>
+                    Dinner
+                    <input class="meal" name = "sat_d" type="text">
+                </label>
+            </div>
+            <br>
+
             <input type="submit">
         </form>
     </div>

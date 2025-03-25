@@ -1,6 +1,5 @@
 .day {
     color: lightgrey;
-    border: 1px  solid black;
     justify-content: center;
     margin: 0 auto;
     border-radius: 30px;
@@ -15,12 +14,19 @@
     flex-direction: row;
     justify-content: center;
     margin: 0 auto;
+    padding: 1em;
 }
 
 .meal{
-    width: 10em;
+    width: 30em;
     height: 2em;
     border-radius: 1em;
     padding-left: 0.5em;
     border: 1px solid black;
+}
+#meal_menu{
+    display: inline-flex;
+    flex-direction: column;
+    color: lightgrey;
+    justify-content: center;
 }

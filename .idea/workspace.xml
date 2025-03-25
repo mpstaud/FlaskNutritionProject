@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84a63104-6aad-4b99-8fa4-36856563d7d5" name="Changes" comment="Consolidated CSS for the calorie calculator form">
-      <change beforePath="$PROJECT_DIR$/.idea/FlaskNutritionProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FlaskNutritionProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="84a63104-6aad-4b99-8fa4-36856563d7d5" name="Changes" comment="update mealplan.css">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_session/2029240f6d1128be89ddc32729463129" beforeDir="false" afterPath="$PROJECT_DIR$/flask_session/2029240f6d1128be89ddc32729463129" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/stylesheets/mealplan.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheets/mealplan.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/meal_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/meal_menu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/mealplan.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mealplan.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -154,6 +153,7 @@
       <workItem from="1738534648381" duration="7114000" />
       <workItem from="1738717520321" duration="25651000" />
       <workItem from="1740014499919" duration="5584000" />
+      <workItem from="1742856787677" duration="634000" />
     </task>
     <task id="LOCAL-00001" summary="add venv files">
       <option name="closed" value="true" />
@@ -243,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739550109495</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="update mealplan.css">
+      <option name="closed" value="true" />
+      <created>1740791457688</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1740791457688</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,10 +276,11 @@
     <MESSAGE value="Update form for caloric calculator, add UI mod script for dynamic select options depending on chosen unit of measurement for height" />
     <MESSAGE value="add gunicorn to requirements.txt" />
     <MESSAGE value="Consolidated CSS for the calorie calculator form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Consolidated CSS for the calorie calculator form" />
+    <MESSAGE value="update mealplan.css" />
+    <option name="LAST_COMMIT_MESSAGE" value="update mealplan.css" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FlaskNutritionProject$plot.coverage" NAME="plot Coverage Results" MODIFIED="1737317746211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FlaskNutritionProject$FlaskNutritionProject.coverage" NAME="FlaskNutritionProject Coverage Results" MODIFIED="1740750444877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FlaskNutritionProject$FlaskNutritionProject.coverage" NAME="FlaskNutritionProject Coverage Results" MODIFIED="1742348950284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

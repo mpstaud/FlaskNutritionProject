@@ -1,24 +1,68 @@
 {% extends "layout.html" %}
 
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='./stylesheets/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./stylesheets/mealplan.css') }}">
+
+
+
+{% endblock stylesheet%}
+
 {% block body %}
-    <form action="/meal_menu" method="post">
+
     <h1>Meal Menu</h1>
-        <div>
-            <h2>Monday</h2>
-            <label>
-                Breakfast
+    <p>{{ sun_b }}</p>
 
-            </label>
-            <label>
-                Lunch
-
-            </label>
-            <h3>Lunch</h3>
-            <h3>Dinner</h3>
-        </div>
-
-
-    </form>
+    <table id="meal_menu">
+        <tr>
+            <th>Day</th>
+            <th>Breakfast</th>
+            <th>Lunch</th>
+            <th>Dinner</th>
+        </tr>
+        <tr>
+            <td>Sunday</td>
+            <td>{{ sun_b }}</td>
+            <td>{{ sun_l }}</td>
+            <td>{{ sun_d }}</td>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>{{ mon_b }}</td>
+            <td>{{ mon_l }}</td>
+            <td>{{ mon_d }}</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>{{ tues_b }}</td>
+            <td>{{ tues_l }}</td>
+            <td>{{ tues_d }}</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>{{ wed_b }}</td>
+            <td>{{ wed_l }}</td>
+            <td>{{ wed_d }}</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>{{ thurs_b }}</td>
+            <td>{{ thurs_l }}</td>
+            <td>{{ thurs_d }}</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>{{ fri_b }}</td>
+            <td>{{ fri_l }}</td>
+            <td>{{ fri_d }}</td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td>{{ sat_b }}</td>
+            <td>{{ sat_l }}</td>
+            <td>{{ sat_d }}</td>
+        </tr>
+    </table>
 
 
 {% endblock %}
