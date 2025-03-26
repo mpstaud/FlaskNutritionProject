@@ -9,7 +9,7 @@
 {% block body %}
     <br>
     <div id="meal_plan">
-        <form id="meal_plan_form" action="/meal_plan" method="POST">
+        <form id="meal_plan_form">
             <br>
 
             <div class="day">
@@ -138,10 +138,48 @@
             </div>
             <br>
 
-            <input type="submit">
+            <button type="button" onclick="submitMealPlan()">Submit</button>
         </form>
     </div>
 
 
+<script>
+    async function submitMealPlan() {
+        const form = document.getElementById("meal_plan_form");
+        const formData = {};
+        const inputs = form.querySelectorAll("input");
 
+        inputs.forEach((input) => {
+            formData[input.name] = input.value;
+        });
+
+        console.log(formData); // Debug: Check data structure before sending.
+
+        try {
+            const response = await fetch('/process_meal_plan', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            // If successful, redirect
+            if (response.ok) {
+                const responseText = await response.text();
+
+                // Load the response (rendered HTML page) into the current window
+                document.open();
+                document.write(responseText);
+                document.close();
+            } else {
+                console.error('Error submitting meal plan:', response.statusText);
+                alert('Failed to submit the form!');
+            }
+        } catch (error) {
+            console.error('Request failed:', error);
+            alert('An error occurred while submitting.');
+        }
+    }
+</script>
 {% endblock %}

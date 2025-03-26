@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template, request, session
+from flask import Flask, redirect, render_template, request, session, jsonify
 from flask_migrate import Migrate
 from models import db
 from operations import add_user
@@ -106,7 +106,7 @@ def caloric_calculator():
         return render_template("caloric_results.html", daily_calories=daily_calories)
     return render_template("caloric_calculator_concept_2.html")
 
-@app.route("/meal_plan", methods=["GET", "POST"])
+@app.route("/meal_plan", methods=["GET","POST"])
 def meal_plan():
     """
     Creates a new meal plan for the user. This function handles both GET and POST
@@ -135,32 +135,17 @@ def meal_plan():
         meal plan page after successfully creating the meal plan.
     :rtype: Union[str, werkzeug.wrappers.response.Response]
     """
-    if request.method == "POST":
-        sun_b = str(request.form.get("sun_b"))
-        sun_l = str(request.form.get("sun_l"))
-        sun_d = str(request.form.get("sun_d"))
-        mon_b = str(request.form.get("mon_b"))
-        mon_l = str(request.form.get("mon_l"))
-        mon_d = str(request.form.get("mon_d"))
-        tues_b = str(request.form.get("tues_b"))
-        tues_l = str(request.form.get("tues_l"))
-        tues_d = str(request.form.get("tues_d"))
-        wed_b = str(request.form.get("wed_b"))
-        wed_l = str(request.form.get("wed_l"))
-        wed_d = str(request.form.get("wed_d"))
-        thurs_b = str(request.form.get("thurs_b"))
-        thurs_l = str(request.form.get("thurs_l"))
-        thurs_d = str(request.form.get("thurs_d"))
-        fri_b = str(request.form.get("fri_b"))
-        fri_l = str(request.form.get("fri_l"))
-        fri_d = str(request.form.get("fri_d"))
-        sat_b = str(request.form.get("sat_b"))
-        sat_l = str(request.form.get("sat_l"))
-        sat_d = str(request.form.get("sat_d"))
 
-        return render_template("meal_menu.html", sun_b=sun_b,sun_l=sun_l,sun_d=sun_d,mon_b=mon_b,mon_l=mon_l,mon_d=mon_d,tues_b=tues_b,tues_l=tues_l,tues_d=tues_d,wed_b=wed_b,wed_l=wed_l,wed_d=wed_d,thurs_b=thurs_b,thurs_l=thurs_l,thurs_d=thurs_d,fri_b=fri_b,fri_l=fri_l,fri_d=fri_d,sat_b=sat_b,sat_l=sat_l,sat_d=sat_d)
     return render_template("mealplan.html")
 
+@app.route('/process_meal_plan', methods=['POST'])
+def process_meal_plan():
+    try:
+        meal_plan = request.json
+        print(meal_plan)
+        return render_template('submitted_meal_plan.html', meal_plan=meal_plan)
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)})
 
 if __name__ == '__main__':
     app.run()

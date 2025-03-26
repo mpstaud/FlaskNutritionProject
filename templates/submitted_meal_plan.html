@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='./stylesheets/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./stylesheets/mealplan.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./stylesheets/MealPlanSummaryStyles.css') }}">
+
+{% endblock %}
+
+{% block body %}
+    <h1>Your Submitted Meal Plan</h1>
+    <div id="meal-plan-summary">
+        <h2>Here’s what you submitted:</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Breakfast</th>
+                    <th>Lunch</th>
+                    <th>Dinner</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sunday</td>
+                    <td>{{ meal_plan.sun_b or 'Not submitted' }}</td>
+                    <td>{{ meal_plan.sun_l or 'Not submitted' }}</td>
+                    <td>{{ meal_plan.sun_d or 'Not submitted' }}</td>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>{{ meal_plan.mon_b or 'Not submitted' }}</td>
+                    <td>{{ meal_plan.mon_l or 'Not submitted' }}</td>
+                    <td>{{ meal_plan.mon_d or 'Not submitted' }}</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>{{ meal_plan.tues_b or 'Not submitted' }}</td>
+                    <td>{{ meal_plan.tues_l or 'Not submitted' }}</td>
+                    <td>{{ meal_plan.tues_d or 'Not submitted' }}</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>{{ meal_plan.wed_b or 'Not submitted' }}</td>
+                    <td>{{ meal_plan.wed_l or 'Not submitted' }}</td>
+                    <td>{{ meal_plan.wed_d or 'Not submitted' }}</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>{{ meal_plan.thurs_b or 'Not submitted' }}</td>
+                    <td>{{ meal_plan.thurs_l or 'Not submitted' }}</td>
+                    <td>{{ meal_plan.thurs_d or 'Not submitted' }}</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>{{ meal_plan.fri_b or 'Not submitted' }}</td>
+                    <td>{{ meal_plan.fri_l or 'Not submitted' }}</td>
+                    <td>{{ meal_plan.fri_d or 'Not submitted' }}</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>{{ meal_plan.sat_b or 'Not submitted' }}</td>
+                    <td>{{ meal_plan.sat_l or 'Not submitted' }}</td>
+                    <td>{{ meal_plan.sat_d or 'Not submitted' }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
